@@ -1,10 +1,12 @@
-var app = require('express')();
+var express = require('express')
+var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 var path = require('path');
 
-app.use('/static', express.static('assets'))
+app.use(express.static(path.join(__dirname, "assets")))
+app.use(express.static(path.join(__dirname, "node_modules")))
 
 var clients = {};
 

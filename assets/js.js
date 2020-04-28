@@ -1,8 +1,8 @@
-$(document).ready(function() {
-  var socket = io.connect('window.location.hostname');
+$(document).ready(function () {
+  var socket = io.connect(`http://localhost:3000`);
   var ready = false;
 
-  $("#submit").submit(function(e) {
+  $("#submit").submit(function (e) {
     e.preventDefault();
     $("#nick").fadeOut();
     $("#chat").fadeIn();
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
   });
 
-  $("#textarea").keypress(function(e) {
+  $("#textarea").keypress(function (e) {
     if (e.which == 13) {
       var text = $("#textarea").val();
       $("#textarea").val('');
@@ -30,21 +30,17 @@ $(document).ready(function() {
   });
 
 
-  socket.on("update", function(msg) {
+  socket.on("update", function (msg) {
     if (ready) {
       $('.chat').append('<li class="info">' + msg + '</li>')
     }
   });
 
-  socket.on("chat", function(client, msg) {
+  socket.on("chat", function (client, msg) {
     if (ready) {
       var time = new Date();
       $(".chat").append('<li class="field"><div class="msg"><span>' + client + ':</span><p>' + msg + '</p><time>' + time.getHours() + ':' + time.getMinutes() + '</time></div></li>');
 
     }
   });
-
-
-
-
 });
