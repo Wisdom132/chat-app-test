@@ -1,13 +1,20 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var port = process.env.PORT || 3000
+var port = process.env.PORT || 3000;
+var path = require('path');
+
 
 var clients = {};
 
 app.get('/', function (req, res) {
   res.send('server is running');
 });
+
+app.get("/start", (req, res) => {
+  res.sendFile(path.join(__dirname + '/index.html'));
+
+})
 
 io.on("connection", function (client) {
   client.on("join", function (name) {

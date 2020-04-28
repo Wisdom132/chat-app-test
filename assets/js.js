@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	var socket = io.connect(window.location.hostname);
+	var socket = io.connect('https://chatter-apper.herokuapp.com/');
 	var ready = false;
 
 	$("#submit").submit(function (e) {
