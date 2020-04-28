@@ -1,52 +1,57 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 
-html, body {
+html,
+body {
     background: #e5e5e5;
     font-family: 'Lato', sans-serif;
     margin: 0px auto;
-    height:100%;
+    height: 100%;
 }
-::selection{
-  background: #F36C44;
-  color: #FFF;
-}
-input { outline: none; }
 
-a{
-  color: rgba(82,179,217,0.9);
+::selection {
+    background: #F36C44;
+    color: #FFF;
+}
+
+input {
+    outline: none;
+}
+
+a {
+    color: rgba(82, 179, 217, 0.9);
 }
 
 
 .nickname_container {
-   background: #F36C44;
-   width: 100%;
-   height:100%;
-   margin: 0;
-   padding: 0;
-   top: 0;
-   left: 0;
-   z-index:2000;
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+    background: #F36C44;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
 .nickname_container span {
-	color:#FFF;
+    color: #FFF;
 }
 
 .nickname_container input {
-	text-align:center;
-	color:#FFF;
-	font-size: 35px;
-	height:50px;
-	background: #F36C44;
-	border:none;
-	border-bottom:1px solid #CB5B3B;
-	margin:15px 10%;
+    text-align: center;
+    color: #FFF;
+    font-size: 35px;
+    height: 50px;
+    background: #F36C44;
+    border: none;
+    border-bottom: 1px solid #CB5B3B;
+    margin: 15px 10%;
 }
 
 /* Menu */
@@ -62,22 +67,25 @@ a{
     z-index: 100;
 }
 
-.name, .last {
-	position: absolute;
+.name,
+.last {
+    position: absolute;
     left: 15px;
     font-family: 'Lato';
     cursor: default;
 }
+
 .name {
     font-size: 25px;
     font-weight: 300;
-    color: rgba(255,255,255,0.98);
+    color: rgba(255, 255, 255, 0.98);
     top: 3px;
 }
-.last{
+
+.last {
     font-size: 11px;
     font-weight: 400;
-    color: rgba(255,255,255,0.6); 
+    color: rgba(255, 255, 255, 0.6);
     top: 30px;
 }
 
@@ -92,6 +100,7 @@ a{
     margin-top: 60px;
     margin-bottom: 10px;
 }
+
 .chat li {
     padding: 0.5rem;
     overflow: hidden;
@@ -103,6 +112,7 @@ a{
     border-top-left-radius: 0px;
     box-shadow: -1px 2px 0px #D4D4D4;
 }
+
 .other:before {
     content: "";
     position: relative;
@@ -120,6 +130,7 @@ a{
     justify-content: flex-end;
     align-items: flex-end;
 }
+
 .self .msg {
     order: 1;
     border-bottom-right-radius: 0px;
@@ -127,7 +138,7 @@ a{
 }
 
 .msg span {
-	font-size: 0.7rem;
+    font-size: 0.7rem;
     color: #969898;
 }
 
@@ -138,6 +149,7 @@ a{
     border-radius: 2px;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);
 }
+
 .msg p {
     font-size: 0.8rem;
     margin: 0 0 0.2rem 0;
@@ -145,8 +157,8 @@ a{
 }
 
 .info {
-	color:#FFF;
-	background:#A2A4A4;
+    color: #FFF;
+    background: #A2A4A4;
 }
 
 .msg time {
@@ -160,8 +172,9 @@ a{
     -moz-user-select: none;
     -ms-user-select: none;
 }
-.msg time:before{
-    content:"\f017";
+
+.msg time:before {
+    content: "\f017";
     color: #ddd;
     font-family: FontAwesome;
     display: inline-block;
@@ -181,7 +194,7 @@ input.textarea {
     background: #fafafa;
     border: none;
     outline: none;
-    padding:10px;
+    padding: 10px;
     color: #666;
     font-weight: 400;
 }

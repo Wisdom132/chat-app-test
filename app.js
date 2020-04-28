@@ -4,6 +4,7 @@ var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 var path = require('path');
 
+app.use('/static', express.static('assets'))
 
 var clients = {};
 
